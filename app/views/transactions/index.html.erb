@@ -1,7 +1,7 @@
 <h1>Transactions</h1>
 <p>Your total balance is: <%= @balance %></p>
-<p>Your Checkings balance is: <%= @checking_balance %></p>
-<p>Your Savings balance is: <%= @savings_balance %></p>
+<p>Checkings: <%= @checking_balance %></p>
+<p>Savings: <%= @savings_balance %></p>
 
 <% @transactions.each do |t| %>
   <p>| <%= t.account_type  %> | <%= t.amount  %> |</p>
