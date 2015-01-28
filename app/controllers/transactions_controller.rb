@@ -2,8 +2,10 @@ class TransactionsController < ApplicationController
   def index
     @transactions = Transaction.all
     @balance = Transaction.balance(@transactions)
-    @checking_balance = Transaction.balance(Transaction.checkings)
-    @savings_balance = Transaction.balance(Transaction.savings)
+    @checkings = Transaction.checkings
+    @checking_balance = Transaction.balance(@checkings)
+    @savings = Transaction.savings
+    @savings_balance = Transaction.balance(@savings)
   end
 
   def new
