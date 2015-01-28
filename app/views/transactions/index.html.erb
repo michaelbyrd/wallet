@@ -1,0 +1,6 @@
+<h1>Transactions</h1>
+<p>Your balance is: <%= @balance %></p>
+
+<% @transactions.each do |t| %>
+  <p><%= t.amount %></p>
+<% end %>
