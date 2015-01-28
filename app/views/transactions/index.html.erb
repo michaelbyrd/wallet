@@ -4,3 +4,5 @@
 <% @transactions.each do |t| %>
   <p><%= t.amount %></p>
 <% end %>
+
+<%= link_to("New Transaction",new_transaction_path) %>
