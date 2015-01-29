@@ -21,8 +21,7 @@ class TransactionsController < ApplicationController
     end
   end
 
-  private
-  def transaction_params
+  private def transaction_params
     params.require(:transaction).permit(:account_type, :amount)
   end
 end
