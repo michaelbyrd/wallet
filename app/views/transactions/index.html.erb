@@ -1,19 +1,19 @@
 <h1>Transactions</h1>
-<p>Your total balance is: <%= @balance %></p>
+<p>Your total balance is: <%= number_to_currency @balance %></p>
 <p>| <%= @transactions.length %> transactions |</p>
-<p>Checkings: <%= @checking_balance %></p>
+<p>Checkings: <%= number_to_currency @checking_balance %></p>
 <p>| <%= @checkings.length %> transactions |</p>
-<p>Savings: <%= @savings_balance %></p> 
+<p>Savings: <%= number_to_currency @savings_balance %></p> 
 <p>| <%= @savings.length %> transactions |</p>
 
 <h2>Checkings</h2>
 <% @checkings.each do |t| %>
-  <p>| <%= t.amount  %> |</p>
+  <p>| <%= number_to_currency t.amount  %> |</p>
 <% end %>
 
 <h2>Savings</h2>
 <% @savings.each do |t| %>
-  <p>| <%= t.amount  %> |</p>
+  <p>| <%= number_to_currency t.amount  %> |</p>
 <% end %>
 
 <%= link_to("Enter Transaction",new_transaction_path) %>
